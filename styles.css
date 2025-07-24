@@ -1,0 +1,140 @@
+body, input, select, button {
+  font-family: 'Segoe UI', sans-serif;
+  color: #204366;
+}
+.welcome-bg {
+  background: linear-gradient(135deg, #d1f1eb 0, #d8e8fd 100%);
+  min-height: 100vh;
+}
+.welcome-container {
+  max-width: 420px;
+  margin: 75px auto 0;
+  background: #fff;
+  padding: 2.2rem 2.4rem;
+  border-radius: 16px;
+  box-shadow: 0 18px 48px #12568a23;
+  text-align: center;
+}
+.brand {
+  font-size: 2.5rem;
+  color: #244a93;
+  letter-spacing: .08em;
+  margin-bottom: 8px;
+}
+.tagline {
+  font-size: 1.13rem;
+  color: #338e67;
+  margin-bottom: 28px;
+  font-style: italic;
+}
+.welcome-form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+.welcome-form input, .welcome-form select {
+  width: 100%;
+  margin-top: 3px;
+  margin-bottom: 10px;
+  padding: 9px;
+  border-radius: 5px;
+  border: 1px solid #b3cee6;
+  font-size: 1rem;
+}
+.pro-btn {
+  background: #377ad2;
+  color: #fff;
+  font-weight: bold;
+  padding: 11px 0;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 20px;
+  box-shadow: 0 1px 7px #4685a652;
+  letter-spacing: .04em;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background .22s;
+}
+.pro-btn:hover {
+  background: #165587;
+}
+.container {
+  max-width: 700px;
+  margin: 36px auto;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 16px 40px #01366a13;
+  padding: 24px 28px;
+}
+h1, h2 {
+  text-align: center;
+  color: #195e83;
+}
+.card {
+  margin: 22px 0;
+  background: #f7fafd;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px #8db5d133;
+}
+input, select, button {
+  padding: 9px 12px;
+  margin: 4px 2px;
+  border: 1.3px solid #b6d3e5;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+button {
+  background: #48a6da;
+  color: #fff;
+  transition: background .16s;
+}
+button:hover {
+  background: #25688c;
+}
+table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+  background: #eaf5fb;
+  border-radius: 7px;
+  overflow: hidden;
+}
+th, td {
+  padding: 8px 5px;
+  border-bottom: 1px solid #dbf3fe;
+  text-align: center;
+}
+th {
+  color: #205578;
+  font-weight: 600;
+  background: #d4ecfa;
+}
+#recommendations {
+  text-align: center;
+  padding: 15px;
+  background: #f5fff7;
+  border-radius: 7px;
+  color: #18595f;
+  font-size: 1.08rem;
+  margin-bottom: 6px;
+}
+/* Water bar override & animation */
+#water-progress-container {
+  margin-bottom: 12px;
+  margin-top: 9px;
+}
+#water-progress-bar {
+  background: linear-gradient(90deg, #4daef7 50%, #81e8fa 100%);
+  border-radius: 12px 0 0 12px;
+  height: 100%;
+  transition: width 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+#water-progress-text {
+  font-size: 1.08rem;
+}
+@media (max-width: 850px) {
+  .container { max-width: 98vw; padding: 7vw 4vw; }
+}

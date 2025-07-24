@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | FitLife Companion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome, FitLife Member!</h1>
+
+    <section id="recommend-section" class="card">
+      <h2>Your Personalized Recommendations</h2>
+      <div id="recommendations"></div>
+    </section>
+
+    <section id="diet-section" class="card">
+      <h2>Diet Tracker</h2>
+      <input type="text" id="food-input" placeholder="Food Item">
+      <input type="number" id="calories-input" placeholder="Calories">
+      <button id="add-meal-btn">Add Meal</button>
+      <table>
+        <thead>
+          <tr>
+            <th>Food</th>
+            <th>Calories</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody id="meals-list"></tbody>
+      </table>
+      <p id="total-calories"></p>
+    </section>
+
+    <section id="water-section" class="card">
+      <h2>Water Tracker</h2>
+      <div id="water-progress-container" style="background:#e8f3fd;border-radius:12px;height:32px;width:100%;margin:15px 0;box-shadow:0 2px 10px #73c6eb33;overflow:hidden;position:relative;">
+        <div id="water-progress-bar" style="height:100%;width:0;transition:width .5s;"></div>
+        <span id="water-progress-text" style="position:absolute;left:50%;top:0;transform:translateX(-50%);line-height:32px;font-weight:bold;color:#215e8a;">0%</span>
+      </div>
+      <p>Glasses Drunk Today: <span id="water-count">0</span></p>
+      <button id="add-water-btn">Add Glass</button>
+      <button id="reset-water-btn">Reset</button>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

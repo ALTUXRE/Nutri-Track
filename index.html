@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome | Nutri-Track Companion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="welcome-bg">
+  <div class="welcome-container">
+    <h1 class="brand">Nutri-Track Companion</h1>
+    <p class="tagline">Your Personalized Diet & Hydration Coach</p>
+    <form id="user-form" class="welcome-form">
+      <label>Age
+        <input type="number" id="age" required min="10" max="120">
+      </label>
+      <label>Weight (kg)
+        <input type="number" id="weight" required min="30" max="250">
+      </label>
+      <label>Gender
+        <select id="gender" required>
+          <option value="">Select gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </label>
+      <label>Activity Level
+        <select id="activity" required>
+          <option value="">Select activity</option>
+          <option value="sedentary">Sedentary</option>
+          <option value="light">Lightly active</option>
+          <option value="moderate">Moderately active</option>
+          <option value="active">Active</option>
+        </select>
+      </label>
+      <label>Goal
+        <select id="goal" required>
+          <option value="">Select goal</option>
+          <option value="lose">Lose Weight</option>
+          <option value="maintain">Maintain Weight</option>
+          <option value="gain">Gain Weight</option>
+        </select>
+      </label>
+      <label>Diet Type
+        <select id="diet-type" required>
+          <option value="">Select preference</option>
+          <option value="veg">Vegetarian</option>
+          <option value="nonveg">Non-Vegetarian</option>
+        </select>
+      </label>
+      <button type="submit" class="pro-btn">Continue</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById('user-form').onsubmit = function(e) {
+      e.preventDefault();
+      const userInfo = {
+        age: Number(document.getElementById('age').value),
+        weight: Number(document.getElementById('weight').value),
+        gender: document.getElementById('gender').value,
+        activity: document.getElementById('activity').value,
+        goal: document.getElementById('goal').value,
+        dietType: document.getElementById('diet-type').value
+      };
+      localStorage.setItem('fitlifeUser', JSON.stringify(userInfo));
+      // Reset trackers for new user session
+      localStorage.setItem('meals', '[]');
+      localStorage.setItem('waterCount', '0');
+      window.location.href = 'dashboard.html';
+    }
+  </script>
+</body>
+</html>
